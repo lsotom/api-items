@@ -20,7 +20,12 @@ const userSchema = mongoose.Schema({
         minlength: 8,
         trim: true,
         select: false
+    },
+    avatar: {
+        type: String,
+        default: null
     }
+
 })
 
 userSchema.pre('save', async function() {
